@@ -25,4 +25,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: sb003/cicdtest:latest
+        tags: sb003/docker-cicd-test:latest
