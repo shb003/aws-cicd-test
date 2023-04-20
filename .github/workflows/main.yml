@@ -21,6 +21,9 @@ jobs:
         cache: 'npm'
     - run: npm ci
     
+    - name: Index Test
+      run: npm test
+    
   Deploy:
     needs: Build
     runs-on: ubuntu-latest
