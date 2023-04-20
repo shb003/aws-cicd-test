@@ -1,6 +1,6 @@
 const assert = require('assert');
 const request = require('supertest');
-const app = require('../index.js');
+const app = require('./index.js');
 
 describe('Index', function() {
   describe('GET /', function() {
