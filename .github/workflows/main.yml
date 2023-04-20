@@ -20,9 +20,8 @@ jobs:
         node-version: 14.x
         cache: 'npm'
     - run: npm ci
-    
-    - name: Index Test
-      run: npm test
+    - run: npm install --save-dev mocha assert
+    - run: npm test
     
   Deploy:
     needs: Build
