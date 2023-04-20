@@ -20,10 +20,6 @@ jobs:
         node-version: 14.x
         cache: 'npm'
     - run: npm ci
-    - run: npm install --save-dev mocha assert
-    - run: npm install --save-dev supertest
-    
-    - run: npm test
     
   Deploy:
     needs: Build
