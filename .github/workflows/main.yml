@@ -19,9 +19,13 @@ jobs:
       with:
         node-version: 14.x
         cache: 'npm'
-    - run: npm install
+    - run: npm ci
+    - run: npm install --save-dev mocha assert
     
-    - run: npm test
+    - name: Run tests
+      run: |
+        export PATH="$(npm bin):$PATH:/usr/local/lib/node_modules/mocha/bin"
+        npx mocha test.js
     
   Deploy:
     needs: Build
